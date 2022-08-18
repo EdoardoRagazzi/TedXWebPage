@@ -1,0 +1,28 @@
+(function ($) {
+    "use strict";
+
+    $(document).ready(function () {
+        var body = $("body");
+
+        if (body.hasClass("home")) {
+            var $header = $('#header');
+            var st = $(this).scrollTop();
+            if (st > 100) {
+                $header.removeClass('av_header_transparency');
+            } else {
+                $header.addClass('av_header_transparency');
+            }
+
+            $(window).scroll(function () {
+                var $header = $('#header');
+                var st = $(this).scrollTop();
+                if (st > 100) {
+                    $header.removeClass('av_header_transparency');
+                } else {
+                    $header.addClass('av_header_transparency');
+                }
+
+            });
+        }
+    });
+})(jQuery);
